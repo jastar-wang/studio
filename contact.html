@@ -13,9 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <meta name="full-screen" content="yes">
     <link rel="icon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="css/cui.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/less.css" />
+    <link rel="stylesheet" href="css/base.min.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/less.min.css" />
     <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 
@@ -74,7 +74,7 @@
     <script type="text/javascript" src="js/sub_footer.js"></script>
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript">
-        $("#sub").click(function (e) {
+        $("#sub").click(function(e) {
             var name = $("#name").val();
             var tel = $("#tel").val();
             var txt = $("#txt").val();
@@ -95,16 +95,24 @@
             $.ajax({
                 url: "#",
                 type: 'GET',
-                data: { 'name': name, 'tel': tel, 'txt': txt },
+                data: {
+                    'name': name,
+                    'tel': tel,
+                    'txt': txt
+                },
                 //dataType:"text",
                 async: false,
-                error: function () { alert("error"); },
-                success: function (data) { alert(data); }
+                error: function() {
+                    alert("error");
+                },
+                success: function(data) {
+                    alert(data);
+                }
             })
         });
     </script>
     <script>
-        $('.map .btn').click(function () {
+        $('.map .btn').click(function() {
             $('.map-pop').show();
             $(this).parents('.map').addClass('map-big');
             var winW = $(window).width();
@@ -112,16 +120,20 @@
             if (winW < 768) {
                 $('.map-pop').height($(window).height() - 50 - 80);
                 $('.map-big').height($(window).height() - 50 - 80);
-                $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+                $("html, body").animate({
+                    scrollTop: $(document).height()
+                }, 1000);
             } else {
 
                 $('.map-pop').height($(window).height() - 344 - 101);
                 $('.map-big').height($(window).height() - 344 - 101);
-                $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+                $("html, body").animate({
+                    scrollTop: $(document).height()
+                }, 1000);
             }
             initMap();
         })
-        $('.map .btn-down').click(function () {
+        $('.map .btn-down').click(function() {
             $('.map-pop').hide();
             $(this).parents('.map').removeClass('map-big');
             $('.map').height('107');

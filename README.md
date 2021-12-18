@@ -1,9 +1,9 @@
 # Project
-北创软件工作室官方网站（静态）
+You may not believe it. This is the studio I'm looking forward to.
 
 # Author
 - Name：Jastar Wang
-- QQ：1152241429
 - Email：jastar_wang@163.com
-- Domain：www.jastar-wang.com
-- Last Update Time：2020-6-8 19:15:32
+
+# License
+The studio is released under No License.
