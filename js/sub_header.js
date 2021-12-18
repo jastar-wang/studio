@@ -32,8 +32,8 @@ document.writeln("<div class=\'c\'></div>");
 document.writeln("<!-- header-end -->");
 
 /**
- * @author:Jastar·Wang
- * @date:2016年6月13日17:14:41
+ * @author:Jastar Wang
+ * @date: 2016-06-13 17:14:41
  */
 function loadNavStyleFn() {
     /**	导航菜单红色背景的展示	*/
